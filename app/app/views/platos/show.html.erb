@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @plato.nombre %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @plato.precio %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @plato.descripcion %>
+</p>
+
+<p>
+  <strong>Cantidad personas:</strong>
+  <%= @plato.cantidad_personas %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= @plato.imagen %>
+</p>
+
+<p>
+  <strong>Valoracion:</strong>
+  <%= @plato.valoracion %>
+</p>
+
+
+<%= link_to 'Editar', edit_restaurant_plato_path(@plato) %> |
+<%= link_to 'Volver', restaurant_platos_path %>
+
+<% if user_signed_in? %>
+  <%= link_to 'Pedir', home_index_path %>
+<% end %>

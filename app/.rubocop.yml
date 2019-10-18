@@ -1,0 +1,94 @@
+# Dsactivando los cops por default
+
+Bundler/OrderedGems:
+  Exclude:
+    - 'Gemfile'
+
+Layout/IndentationWidth:
+  Exclude:
+    - 'app/controllers/home_controller.rb'
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+    - 'config/environments/production.rb'
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/test_helper.rb'
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'app/controllers/home_controller.rb'
+    - 'app/helpers/application_helper.rb'
+    - 'app/helpers/home_helper.rb'
+    - 'app/mailers/application_mailer.rb'
+    - 'app/models/application_record.rb'
+    - 'config/application.rb'
+
+Style/EmptyMethod:
+  Exclude:
+    - 'app/controllers/home_controller.rb'
+
+Style/ExpandPathArguments:
+  Exclude:
+    - 'bin/rails'
+    - 'bin/rake'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - 'bin/setup'
+    - 'bin/update'
+
+Style/RedundantBegin:
+  Exclude:
+    - 'bin/yarn'
+
+Style/StderrPuts:
+  Exclude:
+    - 'bin/yarn'
+
+Style/StringLiterals:
+  Exclude:
+    - 'bin/yarn'
+    - 'config/environments/production.rb'
+    - 'config/puma.rb'
+    - 'config/routes.rb'
+    - 'test/application_system_test_case.rb'
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+
+# Nuestros cops
+
+Metrics/LineLength:
+  Max: 120
+
+
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+
+
+Layout/SpaceAfterComma:
+  Enabled : true
+
+
+Layout/SpaceAroundOperators:
+  Enabled: true
+
+Layout/Tab:
+  Enabled: true
+
+Style/GlobalVars:
+  Enabled: true
+
+Style/DefWithParentheses:
+  Enabled: true
+
+Rails:
+  Enabled: true

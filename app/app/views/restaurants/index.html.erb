@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<div class="title-container">
+  <h1>Restaurants Disponibles</h1>
+  <%= link_to 'Agregar Restaurant', new_restaurant_path,class: "btn btn-default" %>
+</div>
+<div class="restaurants">
+  <% @restaurants.each do |restaurant| %>
+  <div class="restaurant">
+    <div class="thumbnail">
+      <div class="caption">
+          <h3>Nombre: <%= link_to restaurant.nombre,restaurant %></h3>
+          <p>Dirección: <%= restaurant.direccion %></p>
+          <p>Valoracion: <%= restaurant.valoracion %></p>
+          <p><%= restaurant.imagen %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+</div>
+<br>
+
+<%= link_to 'Volver a inicio', home_index_path, class:"btn btn-default"%>

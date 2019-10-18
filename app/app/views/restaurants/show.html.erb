@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <div class="title-container">
+    <h1><%= @restaurant.nombre %></h1>
+</div>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @restaurant.correo %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @restaurant.direccion %>
+</p>
+
+<p>
+  <strong>Valoracion:</strong>
+  <%= @restaurant.valoracion %>
+</p>
+
+<p>
+  <strong>Imagen:</strong>
+  <%= @restaurant.imagen %>
+</p>
+
+<p>
+  <strong>Numero telefonico:</strong>
+  <%= @restaurant.numero_telefonico %>
+</p>
+
+<%=render 'comentariors/comentarior' %>
+
+<%= link_to 'Editar', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Volver', restaurants_path %>
+<%=link_to 'Ver platos disponibles', restaurant_platos_path(@restaurant) %>
+<% if user_signed_in? %>
+<%=link_to 'Ver ordenes disponibles', restaurant_ordens_path(@restaurant) %>
+<% end %>
+
+

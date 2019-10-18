@@ -1,0 +1,12 @@
+<div class="title-container">
+<% if user_signed_in? %>
+  <h1>Bienvenido a Befood <%=current_user.nombre %> !</h1>
+  <% else %>
+  <h1>Bienvenido a Befood!</h1>
+<% end %>
+</div>
+<%= image_tag 'https://cdn0.iconfinder.com/data/icons/people-sex-social-group-text-word/279/words-represent-human-008-512.png' %>
+</br>
+
+<%= link_to 'Ver restaurats', restaurants_path, class:"btn btn-default"%>
+

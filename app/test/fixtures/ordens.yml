@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  plato: MyString
+  precio: 1.5
+  pago: MyString
+  direccion: MyString
+  llegada: 2019-09-29 20:10:40
+  estado: MyString
+  info: MyString
+
+two:
+  plato: MyString
+  precio: 1.5
+  pago: MyString
+  direccion: MyString
+  llegada: 2019-09-29 20:10:40
+  estado: MyString
+  info: MyString

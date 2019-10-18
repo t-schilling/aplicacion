@@ -1,0 +1,52 @@
+<%= form_with(model: [@restaurant, orden], local: true) do |form| %>
+  <% if orden.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(orden.errors.count, "error") %> prohibited this orden from being saved:</h2>
+
+      <ul>
+      <% orden.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombreplato %>
+    <%= form.text_field :nombreplato %>
+  </div>
+
+  <div class="field">
+    <%= form.label :precio %>
+    <%= form.text_field :precio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pago %>
+    <%= form.text_field :pago %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :llegada %>
+    <%= form.datetime_select :llegada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :info %>
+    <%= form.text_field :info %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

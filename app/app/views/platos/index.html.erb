@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Platos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Imagen</th>
+      <th>Valoracion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @platos.each do |plato| %>
+  <% #id_de_plato = Plato.find(params[:id]) %>
+      <tr>
+        <td><%= plato.nombre %></td>
+        <td><%= plato.precio %></td>
+        <td><%= plato.imagen %></td>
+        <td><%= plato.valoracion %></td>
+        <td><%= link_to 'Ver plato', "platos/#{plato.id}" %></td>
+        <% #link_to 'Ver plato', [@restaurant, plato]  %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Agregar Plato', new_restaurant_plato_path(@restaurant) %>
+<%= link_to 'Volver a restaurant', controller: 'restaurants' %>

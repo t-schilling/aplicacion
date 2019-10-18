@@ -1,0 +1,5 @@
+<%= form_for{[@plato, @plato.comentario_platos.build]} do |f| %>
+<%= f.text_area :contenido%>
+  <% = f.number_field :valoracion %>
+  <%= f.submit %>
+<%=  %>

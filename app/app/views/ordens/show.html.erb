@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Plato:</strong>
+  <%= @orden.nombreplato %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @orden.precio %>
+</p>
+
+<p>
+  <strong>Pago:</strong>
+  <%= @orden.pago %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @orden.direccion %>
+</p>
+
+<p>
+  <strong>Llegada:</strong>
+  <%= @orden.llegada %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @orden.estado %>
+</p>
+
+<p>
+  <strong>Info:</strong>
+  <%= @orden.info %>
+</p>
+
+<%= link_to 'Edit', edit_orden_path(@orden) %> |
+<%= link_to 'Back', ordens_path %>

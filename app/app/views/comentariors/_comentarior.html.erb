@@ -1,0 +1,15 @@
+<% @comentariors.each do |comentarior| %>
+<p> <strong> <%= comentarior.user_id%> :</strong>
+ <%= comentarior.contenido %>
+[<%= comentarior.valoracion %> estrellas]
+  <% if user_signed_in? %>
+  <%if current_user.id == comentarior.user_id%>
+  <%= link_to "Eliminar Comentario", [comentarior.restaurant, comentarior], method: :delete %>
+    <%= link_to "Editar Comentario", edit_restaurant_comentarior_path(comentarior.restaurant, comentarior)%>
+    <% end %>
+<% end %></p>
+<% end %>
+
+<% if user_signed_in? %>
+<%= render 'comentariors/form' %>
+<% end %>

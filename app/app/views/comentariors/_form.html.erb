@@ -1,0 +1,13 @@
+<%= form_with(model: [ @restaurant, @restaurant.comentariors.build ], local: true) do |form| %>
+  <p><h3>Nuevo comentario</h3>
+    <%= form.label :contenido %>
+    <%= form.text_area :contenido %>
+  </p>
+  <p>
+    <%= form.label :valoracion %>
+    <%= form.number_field :valoracion %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

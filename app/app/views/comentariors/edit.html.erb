@@ -1,0 +1,13 @@
+<%= form_with(model: [ @restaurant, @comentari], local: true) do |form| %>
+  <p>
+    <%= form.label :contenido %><br>
+    <%= form.text_area :contenido %>
+  </p>
+  <p>
+    <%= form.label :valoracion %><br>
+    <%= form.number_field :valoracion %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
